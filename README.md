@@ -68,6 +68,12 @@ Use generic names such as `rg-lab-network-01`, `vnet-lab-hub-01` and `vm-lab-app
 - [Bicep — Lab virtual network](bicep/network/README.md)
 - [Bicep source](bicep/network/main.bicep)
 
+## Additional published references
+
+- [Backup and restore validation lab](labs/05-backup-and-restore/README.md)
+- [Restore test record template](labs/05-backup-and-restore/TEST-RECORD-TEMPLATE.md)
+- [Hybrid connectivity reference design](docs/HYBRID-CONNECTIVITY-REFERENCE.md)
+
 ## Roadmap
 
 - [x] Add a resource governance lab
@@ -75,7 +81,7 @@ Use generic names such as `rg-lab-network-01`, `vnet-lab-hub-01` and `vm-lab-app
 - [x] Add a monitoring and alerting exercise
 - [x] Add identity and RBAC learning exercise
 - [x] Add a reusable Bicep network starter
-- [ ] Add backup and restore validation
-- [ ] Add an Azure hybrid connectivity reference design
+- [x] Add backup and restore validation
+- [x] Add an Azure hybrid connectivity reference design
 
 **Cost reminder:** these guides are learning material, not a promise of zero-cost execution. Review current pricing and clean up resources. The Bicep template creates only a VNet and subnets; it has not been deployed or live-tested as part of this portfolio update.
