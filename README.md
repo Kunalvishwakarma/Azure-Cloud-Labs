@@ -59,13 +59,23 @@ For each lab, document:
 
 Use generic names such as `rg-lab-network-01`, `vnet-lab-hub-01` and `vm-lab-app-01`. Do not use names copied from a work tenant.
 
+## Published labs and templates
+
+- [Lab 01 — Resource governance](labs/01-resource-governance/README.md)
+- [Lab 02 — Network segmentation](labs/02-network-segmentation/README.md)
+- [Lab 03 — Monitoring and alerting](labs/03-monitoring-and-alerting/README.md)
+- [Lab 04 — Identity and RBAC](labs/04-identity-and-rbac/README.md)
+- [Bicep — Lab virtual network](bicep/network/README.md)
+- [Bicep source](bicep/network/main.bicep)
+
 ## Roadmap
 
-- [ ] Add a resource governance lab
-- [ ] Add a VNet and NSG lab
-- [ ] Add a secure VM deployment lab
-- [ ] Add monitoring and alerting exercises
+- [x] Add a resource governance lab
+- [x] Add a VNet and NSG lab guide
+- [x] Add a monitoring and alerting exercise
+- [x] Add identity and RBAC learning exercise
+- [x] Add a reusable Bicep network starter
 - [ ] Add backup and restore validation
 - [ ] Add an Azure hybrid connectivity reference design
 
-**Cost and safety:** Azure resources may incur charges. Check pricing, quotas and cleanup requirements before deployment. Avoid exposing management ports directly to the internet.
+**Cost reminder:** these guides are learning material, not a promise of zero-cost execution. Review current pricing and clean up resources. The Bicep template creates only a VNet and subnets; it has not been deployed or live-tested as part of this portfolio update.
