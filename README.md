@@ -1,29 +1,33 @@
 # Azure Cloud Labs
 
-**Microsoft Azure | Hybrid cloud | Governance | Security | Operations**
+**Microsoft Azure | Hybrid infrastructure | Governance | Security | Operations**
 
-Hands-on learning exercises for designing, deploying and operating secure Azure infrastructure. Labs should be repeatable, cost-conscious and safe for a personal test subscription.
+My enterprise infrastructure background includes work across on-premises/datacenter platforms and Azure-related hybrid-cloud initiatives. This repository is where I organise practical Azure learning and technical exercises around the infrastructure disciplines that matter in production: governance, network design, identity, security, monitoring, backup and operational control.
 
-## Lab principles
+**Important distinction:** this is an independent learning portfolio. The guides and starter templates do not, by themselves, claim a live Azure deployment or production implementation.
 
-- Use a dedicated non-production subscription and least-privilege access.
-- Set budget alerts and clean up billable resources after each exercise.
-- Prefer parameterized templates and synthetic resource names.
-- Never commit credentials, access tokens, tenant IDs or subscription IDs.
-- Review current Azure documentation before applying portal or CLI steps.
+## Learning and engineering objectives
+
+- Build a repeatable, secure and cost-aware Azure lab environment.
+- Apply governance through resource groups, tags, locks and budgets.
+- Understand virtual networks, subnets, NSGs and controlled connectivity.
+- Explore identity, RBAC and secure administrative access.
+- Configure monitoring, logging, backup and recovery exercises.
+- Use infrastructure as code to make deployments reviewable and repeatable.
+- Relate Azure services to hybrid infrastructure and operational requirements.
 
 ## Learning path
 
-| Level | Lab | Learning outcome |
+| Area | Exercise | Intended outcome |
 |---|---|---|
-| 1 | Resource groups, tags and locks | Organize and govern resources |
-| 2 | Virtual networks and subnets | Understand address spaces and segmentation |
-| 3 | Network security groups | Apply controlled traffic rules |
-| 4 | Virtual machine hardening | Configure secure administration |
-| 5 | Azure Monitor and Log Analytics | Collect and investigate telemetry |
-| 6 | Backup and recovery | Understand protection and restoration |
-| 7 | Identity and RBAC | Apply least privilege |
-| 8 | Hybrid connectivity concepts | Understand secure on-premises integration |
+| Governance | Resource groups, tags and locks | Organise and govern resources |
+| Networking | Virtual networks and subnets | Design address spaces and segmentation |
+| Network security | Network security groups | Apply controlled traffic rules |
+| Compute | Virtual machine hardening | Secure administrative access |
+| Observability | Azure Monitor and Log Analytics | Collect and investigate telemetry |
+| Resilience | Backup and recovery | Understand protection and restoration |
+| Identity | Microsoft Entra ID and RBAC | Apply least privilege |
+| Hybrid | Connectivity reference design | Understand secure on-premises integration |
 
 ## Reference topology
 
@@ -42,46 +46,29 @@ flowchart TB
     NSG -. governs .-> SUB2
 ```
 
-## Lab record template
-
-For each lab, document:
-
-1. Objective and prerequisites
-2. Services and architecture
-3. Estimated cost and budget safeguards
-4. Deployment steps and configuration
-5. Security considerations
-6. Validation and expected results
-7. Cleanup procedure
-8. Lessons learned
-
-## Example naming convention
-
-Use generic names such as `rg-lab-network-01`, `vnet-lab-hub-01` and `vm-lab-app-01`. Do not use names copied from a work tenant.
-
 ## Published labs and templates
 
 - [Lab 01 — Resource governance](labs/01-resource-governance/README.md)
 - [Lab 02 — Network segmentation](labs/02-network-segmentation/README.md)
 - [Lab 03 — Monitoring and alerting](labs/03-monitoring-and-alerting/README.md)
 - [Lab 04 — Identity and RBAC](labs/04-identity-and-rbac/README.md)
-- [Bicep — Lab virtual network](bicep/network/README.md)
-- [Bicep source](bicep/network/main.bicep)
-
-## Additional published references
-
-- [Backup and restore validation lab](labs/05-backup-and-restore/README.md)
+- [Lab 05 — Backup and restore validation](labs/05-backup-and-restore/README.md)
 - [Restore test record template](labs/05-backup-and-restore/TEST-RECORD-TEMPLATE.md)
 - [Hybrid connectivity reference design](docs/HYBRID-CONNECTIVITY-REFERENCE.md)
+- [Bicep network starter](bicep/network/main.bicep)
 
-## Roadmap
+## Lab execution and evidence
 
-- [x] Add a resource governance lab
-- [x] Add a VNet and NSG lab guide
-- [x] Add a monitoring and alerting exercise
-- [x] Add identity and RBAC learning exercise
-- [x] Add a reusable Bicep network starter
-- [x] Add backup and restore validation
-- [x] Add an Azure hybrid connectivity reference design
+For each exercise, the intended record is: objective, architecture, prerequisites, cost estimate, deployment steps, security considerations, validation evidence, cleanup and lessons learned. As labs are executed and validated, add dated evidence such as deployment output, screenshots with identifiers redacted, test results and concise lessons learned. Do not describe an exercise as deployed until it has actually been run and verified.
 
-**Cost reminder:** these guides are learning material, not a promise of zero-cost execution. Review current pricing and clean up resources. The Bicep template creates only a VNet and subnets; it has not been deployed or live-tested as part of this portfolio update.
+The current Bicep starter creates a virtual network and subnets. It has not been deployed or live-tested as part of this portfolio update.
+
+## Safe lab practices
+
+- Use a dedicated non-production subscription and least-privilege access.
+- Set budget alerts and remove billable resources after exercises.
+- Use synthetic resource names and parameterized templates.
+- Never commit credentials, tokens, tenant IDs or subscription IDs.
+- Check current Microsoft documentation and pricing before deployment.
+
+This repository is a learning and demonstration space, not a claim of production Azure implementation. Validate all designs against current Azure guidance and your organisation's security and operational standards.
